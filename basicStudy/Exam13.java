@@ -1,4 +1,6 @@
-package bagicStudy;
+package basicStudy;
+
+import bagicStudy.Diamond;
 
 public class Exam13 {
 
