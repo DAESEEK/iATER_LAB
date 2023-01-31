@@ -1,0 +1,34 @@
+class User:
+    def __init__(self, name, email, password):
+        self.name = name
+        self.email = email
+        self.password = password
+
+        self.following_list = []
+        self.followers = []
+
+    def folloWing(self, another_user):
+        self.following_list.append(another_user)
+    def folloWers(self, another_user):
+        self.followers.append(another_user)
+    def num_following(self):
+        return len(self.following_list)
+    def num_followers(self): 
+        return len(self.followers)
+
+user1 = User("Young", "Young@gmail.com", "12345")
+user2 = User("Yoonsoo", "Yoonsoo@gmail.com", "12345")
+user3 = User("Taeho", "Taeho@gmail.com", "12345")
+user4 = User("Lisa", "Lisa@gmail.com", "12345")
+
+user1.folloWing(user4)
+user1.folloWers(user2)
+user2.folloWing(user3)
+user3.folloWers(user2)
+user4.folloWing(user1)
+user4.folloWers(user3)
+
+print(user1.name, user1.num_following(), user1.num_followers())
+print(user2.name, user2.num_following(), user2.num_followers())
+print(user3.name, user3.num_following(), user3.num_followers())
+print(user4.name, user4.num_following(), user4.num_followers())
