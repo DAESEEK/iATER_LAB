@@ -3,14 +3,13 @@ package bagicStudy;
 public class Exam1 {
 	
 	public static void main(String[]arg) {
-		
-		for(int i =2; i<10; i++) {
-			for(int j=2; j<10; j++) {
-				System.out.printf(i+"*"+j+"="+i*j+" ");		
-			}
-			System.out.println("");
-		}
-	
+		Gugudan gugudan = new Gugudan();
+		// 구구단 2단 출력
+		gugudan.print(2);
+		// 구구단 3단 출력
+		gugudan.print(3);
+		// 원하는 단수를 메소드 파라미터에 넣어 출력
+
 	}
 
 }
